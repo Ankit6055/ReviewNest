@@ -5,7 +5,6 @@ A simple and interactive **Review Collector** web application that allows users 
 ## 🚀 Features
 - Users can **submit** reviews with their **name, title, description, and rating**.
 - Displays reviews dynamically in a **scrollable review section**.
-- **Sticky header** for better UI experience.
 - Interactive **star rating system**.
 - **Responsive** design for a smooth experience across devices.
 
