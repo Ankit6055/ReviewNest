@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Collector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main">
+        <div class="heading">
+            <h1>Review Collector</h1>
+        </div>
+        <div class="input-output-box">
+
+            <div class="input-box">
+                <div class="header">
+                    <h4>Voice Your Experience!</h4>
+                </div>
+                <div class="input-name">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" class="input" placeholder="What should we call you?">
+                </div>
+                <div class="review-title">
+                    <label for="review-title">Review Title:</label>
+                    <input type="text" id="review-title" class="input" placeholder="Give your review a title!">
+                </div>
+                <div class="review-description">
+                    <label for="review-description">Review Description:</label>
+                    <textarea name="review-description" id="review-description" class="review-desc" cols="30" rows="10" placeholder="Tell us what made your experience special!"></textarea>
+                </div>
+                <div class="review-container">
+                    <h3>Rate Us:</h3>
+                    <div class="stars">
+                        <span class="star" data-value="1">&#9733;</span>
+                        <span class="star" data-value="2">&#9733;</span>
+                        <span class="star" data-value="3">&#9733;</span>
+                        <span class="star" data-value="4">&#9733;</span>
+                        <span class="star" data-value="5">&#9733;</span>
+                    </div>
+                    <p>Selected Rating: <span id="rating-value">0</span>/5</p>
+                </div>
+                <div class="submit-button">
+                    <button id="submit-button">Submit</button>
+                </div>
+            </div>
+
+            <div class="output-box">
+                <div class="header">
+                  <h4>Recent Reviews</h4>
+                </div>
+                <div class="review-collector-box">
+                  <h5>Chai & Code Magic!</h5>
+                  <p class="review-text">This cohort is a perfect mix of challenge and competition! It truly activated my rusted brain.exe 🔥</p>
+                  <p class="reviewer"><span class="reviewer-name">~Ankit</span> 
+                    <span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span><span class="star">&#9733;</span>
+                  </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

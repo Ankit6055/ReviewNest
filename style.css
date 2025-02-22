@@ -1,0 +1,353 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #1d0239;
+}
+
+.main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.main h1 {
+    color: #eee9e9;
+    font-family: ui-sans-serif;
+    font-size: 45px;
+    margin-top: 10px;
+}
+
+.header h4 {
+    color: #eee9e9;
+    font-size: 1.1rem;
+}
+
+.input-name label {
+    color: #eee9e9;
+}
+
+.input-output-box {
+    display: flex;
+}
+
+.review-title label {
+    color: #eee9e9
+}
+
+.review-description label {
+    color: #eee9e9
+}
+
+.input-box {
+    height: 670px;
+    width: 40vw;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px 30px;
+    background-color: #2d2234;
+    border-radius: 30px;
+}
+
+.output-box {
+    height: 670px;
+    width: 50vw;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 20px 30px;
+    background-color: #2d2234;
+    border-radius: 25px;
+}
+
+.header {
+    display: flex;
+    margin: 10px 30px;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-name {   
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 30px;
+}
+
+.review-title {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 30px;
+}
+
+.review-description {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    margin: 30px;
+    height: 150px;
+}
+
+.submit-button {
+    margin: 30px;
+}
+
+.input {
+    padding: 15px 10px;
+    border-radius: 15px;
+    border: none;
+    font-family: "Ubuntu", serif;
+    background-color: #3a333a;
+    color: #eee9e9;
+    font-size: 1rem;
+}
+
+.review-desc {
+    padding: 15px 10px;
+    border-radius: 15px;
+    background-color: #3a333a;
+    color: #eee9e9;
+    border: none;
+    font-size: 1rem;
+    resize: none;
+    overflow-y: auto; 
+    scrollbar-width: none;
+}
+
+.review-container h3, p {
+    color: #eee9e9;
+    font-weight: 100;
+    font-size: 1rem;
+}
+
+.review-container {
+    margin: 30px;
+}
+
+.stars {
+    display: flex;
+    gap: 8px; 
+    font-size: 2.5rem; 
+}
+
+.star {
+    color: #3a333a; 
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.star:hover {
+    transform: scale(1.2);
+    color: #FFD700 !important; 
+}
+
+.star.filled {
+    color: #FFC107; 
+    position: relative;
+}
+
+/* Optional: Add animation when selecting stars */
+@keyframes star-pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.star.filled {
+    animation: star-pop 0.3s ease;
+}.stars {
+    display: flex;
+    gap: 8px; /* Add spacing between stars */
+    font-size: 2.5rem; /* Slightly larger size */
+}
+
+.star {
+    color: #3a333a; /* Dark gray for empty state */
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+.star:hover {
+    transform: scale(1.2);
+    color: #FFD700 !important; /* Brighter gold on hover */
+}
+
+.star.filled {
+    color: #FFC107; /* Amber color for selected stars */
+    position: relative;
+}
+
+/* Optional: Add animation when selecting stars */
+@keyframes star-pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+    100% { transform: scale(1); }
+}
+
+.star.filled {
+    animation: star-pop 0.3s ease;
+}
+
+.submit-button button {
+    background-color: #FFC107; /* Warm amber that matches star color */
+    color: #2d2234; /* Dark text for contrast */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    width: 100%;
+}
+
+.submit-button button:hover {
+    background-color: #FFD700; /* Brighter gold on hover */
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(255, 193, 7, 0.3);
+}
+
+.review-collector-box{
+    padding: 15px 10px;
+    border-radius: 15px;
+    border: none;
+    font-family: "Ubuntu", serif;
+    background-color: #3a333a;
+    color: #eee9e9;
+    font-size: 1rem;
+    margin: 30px;
+    line-height: 30px;
+    overflow-y: auto; 
+    scrollbar-width: none;
+}
+.reviewer-name{
+    font-style: italic;
+}
+
+.review-collector-box .reviewer .star {
+    color: gold;
+}
+
+.review-text{
+    line-height: 1.5;
+}
+
+.output-box {
+    position: relative;
+    overflow-y: auto;  /* Enables vertical scrolling when needed */
+    overflow-x: hidden; /* Prevents horizontal overflow */
+    word-wrap: break-word; /* Ensures long words wrap properly */
+    box-sizing: border-box; /* Includes padding in the width calculation */
+}
+
+/* Hide scrollbar for a clean look */
+.output-box::-webkit-scrollbar {
+    display: none; /* Hides scrollbar in Chrome, Safari */
+}
+
+.output-box {
+    -ms-overflow-style: none; /* Hides scrollbar in IE, Edge */
+    scrollbar-width: none; /* Hides scrollbar in Firefox */
+}
+
+
+
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .main h1 {
+        font-size: 32px;
+        text-align: center;
+    }
+
+    .input-output-box {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-box,
+    .output-box {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+        padding: 15px;
+    }
+
+    .input-name,
+    .review-title,
+    .review-description,
+    .review-container,
+    .submit-button {
+        margin: 15px;
+    }
+
+    .input {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .review-desc {
+        padding: 10px;
+        font-size: 0.9rem;
+        height: 120px;
+    }
+
+    .stars {
+        font-size: 1.8rem;
+        gap: 5px;
+    }
+
+    .review-container h3 {
+        font-size: 0.95rem;
+    }
+
+    .review-collector-box {
+        margin: 15px;
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .submit-button button {
+        width: 100%;
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+
+    .header h4 {
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main {
+        margin: 0 10px;
+    }
+
+    .main h1 {
+        font-size: 28px;
+    }
+
+    .input-box,
+    .output-box {
+        border-radius: 20px;
+    }
+
+    .stars {
+        font-size: 1.6rem;
+    }
+
+    .review-container p {
+        font-size: 0.9rem;
+    }
+
+    .review-collector-box h5 {
+        font-size: 1rem;
+    }
+}
